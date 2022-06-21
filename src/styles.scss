@@ -1,0 +1,13 @@
+body {
+  font-family: system-ui;
+  background: rgb(82, 196, 240);
+  background: linear-gradient(
+    180deg,
+    rgba(82, 196, 240, 1) 0%,
+    rgba(155, 222, 248, 1) 42%,
+    rgba(205, 241, 251, 1) 79%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+}
