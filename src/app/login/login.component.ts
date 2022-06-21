@@ -4,6 +4,7 @@ import {
   DEFAULT_STATUS,
   DEFAULT_STATUS_OPTIONS,
 } from '../constants/login-constants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,11 @@ export class LoginComponent implements OnInit {
   public selectedStatus: string = DEFAULT_STATUS;
   public statusOptions: UserStatusSelect[] = DEFAULT_STATUS_OPTIONS;
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+  login(): void {
+    this.router.navigate(['home']);
+  }
 
   ngOnInit(): void {}
 }

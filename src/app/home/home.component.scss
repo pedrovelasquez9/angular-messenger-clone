@@ -1,0 +1,67 @@
+.home-global-container {
+  .home-header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background: #3bb2ea;
+    border: 1px solid #9dd8f4;
+    padding-left: 15px;
+    gap: 10px;
+    img {
+      width: 30px;
+    }
+    p {
+      color: #fff;
+    }
+  }
+  .home-user-status-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .user-status-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    .user-status {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+      padding-left: 5px;
+    }
+  }
+  select {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+  .main-chat-container {
+    height: 600px;
+    background: #fff;
+    overflow-y: scroll;
+  }
+  .main-chat-footer {
+    background-color: #dbeff7;
+    height: 200px;
+  }
+  @media (max-width: 450px) {
+    .home-user-status-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-content: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+  }
+}
