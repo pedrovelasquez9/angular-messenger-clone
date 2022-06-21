@@ -11,21 +11,30 @@
       </div>
       <div class="form-inputs-container">
         <form>
-          <input type="text" name="username" id="username" class="form-input" />
+          <input
+            type="text"
+            name="username"
+            id="username"
+            class="form-input"
+            placeholder="example555@hotmail.com"
+            autocomplete="off"
+          />
           <input
             type="password"
             name="password"
             id="password"
             class="form-input"
+            placeholder="Password"
+            autocomplete="off"
           />
           <a href="#">Can't sign in?</a>
           <div class="form-status-select-container">
             <label for="status-select">Sign in as:</label>
-            <select>
-              <option value="available">Available</option>
-              <option value="away">Away</option>
-              <option value="busy">Busy</option>
-              <option value="offline">Offline</option>
+            <span [class]="['checkbox-status', selectedStatus]"></span>
+            <select [(ngModel)]="selectedStatus" name="statusSelect">
+              <option *ngFor="let opt of statusOptions" [value]="opt.value">
+                {{ opt.name }}
+              </option>
             </select>
           </div>
           <div class="form-checkbox-container">
