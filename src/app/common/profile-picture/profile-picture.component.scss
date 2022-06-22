@@ -1,7 +1,5 @@
 .form-image-container {
-  background-image: url("../../../assets/img/profile-img-online.png");
   width: 118px;
-  height: 118px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -13,4 +11,17 @@
     border-radius: 3px;
     width: 93px;
   }
+}
+
+.available {
+  background-image: url("../../../assets/img/profile-img-online.png");
+}
+.busy {
+  background-image: url("../../../assets/img/profile-img-busy.png");
+}
+.away {
+  background-image: url("../../../assets/img/profile-img-away.png");
+}
+.offline {
+  background-image: url("../../../assets/img/profile-img-default.png");
 }

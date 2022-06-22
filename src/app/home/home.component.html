@@ -9,12 +9,14 @@
   </div>
   <!-- USER STATUS BAR -->
   <div class="home-user-status-container">
-    <app-profile-picture></app-profile-picture>
+    <app-profile-picture [userStatus]="userStatus"></app-profile-picture>
     <div class="user-status-container">
       <div class="user-status">
         <p>Nombre de usuario</p>
-        <select name="user-status" id="user-status">
-          <option value="available">Available</option>
+        <select [(ngModel)]="userStatus" name="user-status" id="user-status">
+          <option *ngFor="let status of statusOptions" [value]="status.value">
+            {{ status.name }}
+          </option>
         </select>
       </div>
       <div class="user-quick-messages">
@@ -24,8 +26,36 @@
       </div>
     </div>
   </div>
+  <hr />
+  <!-- TOOLBAR -->
+  <div class="toolbar-container">
+    <ul class="toolbar-ul">
+      <li><img src="../../assets/img/mensajes.png" alt="msn messages" /></li>
+      <li>
+        <img src="../../assets/img/info-msn-toolbar.png" alt="msn info" />
+      </li>
+      <li><img src="../../assets/img/msn-cubes.png" alt="msn cubes" /></li>
+    </ul>
+    <ul class="toolbar-ul">
+      <li><img src="../../assets/img/msn-pencil.png" alt="msn pencil" /></li>
+      <li><img src="../../assets/img/msn-select.png" alt="msn select" /></li>
+    </ul>
+  </div>
+  <!-- SEARCH BAR -->
+  <div class="searchbar-container">
+    <img src="assets/img/msn-users.webp" alt="msn users icon" />
+    <input
+      type="text"
+      name="search-user"
+      id="search-input"
+      placeholder="Buscar en contactos o en web..."
+    />
+    <img src="assets/img/msn-add-user.png" alt="msn add user" />
+  </div>
   <!-- MAIN CHAT  -->
   <div class="main-chat-container"></div>
   <!-- CHAT FOOTER -->
-  <div class="main-chat-footer"></div>
+  <div class="main-chat-footer">
+    <img src="assets/img/msn-footer.png" alt="msn ad" />
+  </div>
 </div>
