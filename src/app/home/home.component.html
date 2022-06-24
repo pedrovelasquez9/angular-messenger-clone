@@ -53,7 +53,10 @@
     <img src="assets/img/msn-add-user.png" alt="msn add user" />
   </div>
   <!-- MAIN CHAT  -->
-  <div class="main-chat-container"></div>
+  <div class="main-chat-container">
+    <app-users-list [title]="'connected'"></app-users-list>
+    <app-users-list [title]="'disconnected'"></app-users-list>
+  </div>
   <!-- CHAT FOOTER -->
   <div class="main-chat-footer">
     <img src="assets/img/msn-footer.png" alt="msn ad" />

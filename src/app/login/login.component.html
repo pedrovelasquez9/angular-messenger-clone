@@ -25,7 +25,9 @@
           <a href="#">Can't sign in?</a>
           <div class="form-status-select-container">
             <label for="status-select">Sign in as:</label>
-            <span [class]="['checkbox-status', selectedStatus]"></span>
+            <app-status-indicator
+              [userStatus]="selectedStatus"
+            ></app-status-indicator>
             <select [(ngModel)]="selectedStatus" name="statusSelect">
               <option *ngFor="let opt of statusOptions" [value]="opt.value">
                 {{ opt.name }}

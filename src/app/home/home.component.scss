@@ -102,6 +102,8 @@
     height: 600px;
     background: #fff;
     overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 5px 15px;
   }
   .main-chat-footer {
     background-color: #dbeff7;
