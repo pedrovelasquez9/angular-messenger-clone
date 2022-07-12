@@ -129,20 +129,33 @@
     }
   }
   .chat-modal-dialog-container {
-    background: linear-gradient(
-      180deg,
-      #52c4f0 0%,
-      #9bdef8 42%,
-      #cdf1fb 79%,
-      white 100%
-    );
     background-repeat: no-repeat;
     min-height: 600px;
     min-width: 800px;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    padding: 0px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #cee6feaa;
+    .dialog-window-controls {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      align-content: center;
+    }
+    .chat-window-control-container {
+      margin: 7px 0px;
+      background: linear-gradient(
+        180deg,
+        rgba(82, 196, 240, 1) 0%,
+        rgba(255, 255, 255, 1) 35%,
+        rgba(255, 255, 255, 1) 67%,
+        rgba(213, 240, 251, 1) 100%
+      );
+    }
     .chat-modal-toolbar {
       height: 30px;
       box-shadow: 0px 3px 16px 0px #00000073;
@@ -158,24 +171,44 @@
         .chat-conversation-container {
           display: flex;
           flex-direction: column;
+          margin-bottom: 45px;
+          .chat-conversation-header {
+            height: 25%;
+          }
           .chat-conversation {
             width: 100%;
             height: -webkit-fill-available;
           }
           .chat-form-container {
-            width: 100%;
-            height: -webkit-fill-available;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
             form {
+              background: rgb(213, 240, 251);
+              background: linear-gradient(
+                0deg,
+                rgba(213, 240, 251, 1) 0%,
+                rgba(255, 255, 255, 1) 66%
+              );
+              height: 100px;
+              background: linear-gradient(0deg, #d5f0fb 0%, white 66%);
+              height: 100px;
               display: flex;
               flex-direction: column;
-              justify-content: flex-end;
               textarea {
                 width: -webkit-fill-available;
                 resize: unset;
-                height: 50%;
+                height: 50px;
+                background: #ddf3ff;
+                border: 1px solid #cbdfea;
+                &:focus {
+                  outline: none;
+                }
+              }
+              .chat-toolbar-container {
+                display: flex;
+                height: 50px;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: nowrap;
               }
             }
           }
@@ -189,6 +222,10 @@
       justify-content: space-between;
       align-content: center;
       align-items: center;
+      margin-bottom: 45px;
+    }
+    &:not([open]) {
+      display: none;
     }
   }
 }
