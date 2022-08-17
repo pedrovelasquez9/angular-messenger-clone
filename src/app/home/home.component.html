@@ -66,8 +66,8 @@
   </div>
   <dialog open #chatModal class="chat-modal-dialog-container">
     <div class="dialog-window-controls">
-      <button>minimize</button>
-      <button (click)="closeModal()">close</button>
+      <button>-</button>
+      <button (click)="closeModal()">X</button>
     </div>
     <div class="chat-window-control-container">
       <div class="chat-modal-toolbar"></div>
@@ -82,7 +82,11 @@
             ></app-profile-picture>
           </div>
           <div class="chat-conversation-container">
-            <div class="chat-conversation-header"></div>
+            <div class="chat-conversation-header">
+              <h1>Danirod</h1>
+              <p>(Available)</p>
+            </div>
+            <hr />
             <div class="chat-conversation"></div>
             <div class="chat-form-container">
               <form>
@@ -93,13 +97,31 @@
                   rows="10"
                 ></textarea>
                 <div class="chat-toolbar-container">
-                  <div>icon 1</div>
-                  <div>icon 2</div>
-                  <div>icon 3</div>
-                  <div>icon 4</div>
-                  <div>icon 5</div>
-                  <div>icon 6</div>
-                  <div>icon 7</div>
+                  <div class="chat-toolbar-left-bar">
+                    <button class="chat-toolbar-emoji">
+                      <img src="assets/img/msn-open-emoji.png" />
+                    </button>
+                    <button class="chat-toolbar-emoji">
+                      <img src="assets/img/wink-open-emoji.png" />
+                    </button>
+                    <button
+                      (click)="playBuzz()"
+                      class="chat-toolbar-emoji buzz-toolbar-btn"
+                    >
+                      <img src="assets/img/buzz-emoji.png" />
+                    </button>
+                    <button class="chat-toolbar-emoji">
+                      <img src="assets/img/msn-writting.png" />
+                    </button>
+                  </div>
+                  <div class="chat-toolbar-right-bar">
+                    <button class="chat-toolbar-emoji">
+                      <img src="assets/img/msn-pencil-chat.png" />
+                    </button>
+                    <button class="chat-toolbar-emoji">
+                      <img src="assets/img/msn-letter.png" />
+                    </button>
+                  </div>
                 </div>
               </form>
             </div>

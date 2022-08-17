@@ -145,6 +145,14 @@
       justify-content: flex-end;
       align-items: center;
       align-content: center;
+      button {
+        background: transparent;
+        border: none;
+        padding: 6px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+      }
     }
     .chat-window-control-container {
       margin: 7px 0px;
@@ -174,6 +182,17 @@
           margin-bottom: 45px;
           .chat-conversation-header {
             height: 25%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            h1 {
+              font-weight: 500;
+              font-size: 30px;
+            }
+            p {
+              font-size: 15px;
+            }
           }
           .chat-conversation {
             width: 100%;
@@ -206,11 +225,45 @@
                 display: flex;
                 height: 50px;
                 flex-direction: row;
-                justify-content: space-around;
+                justify-content: space-between;
                 align-items: center;
                 flex-wrap: nowrap;
+                .chat-toolbar-left-bar {
+                  display: flex;
+                  gap: 30px;
+                }
+                .chat-toolbar-right-bar {
+                  display: flex;
+                  gap: 10px;
+                }
+                .chat-toolbar-emoji {
+                  background: transparent;
+                  border: none;
+                  padding: 0;
+                }
+                .buzz-toolbar-btn::after {
+                  content: "))";
+                  position: relative;
+                  bottom: 7px;
+                  color: #3e31dc;
+                }
+                .buzz-toolbar-btn::before {
+                  content: "((";
+                  position: relative;
+                  bottom: 7px;
+                  color: #3e31dc;
+                }
+                img {
+                  width: 23px;
+                }
               }
             }
+          }
+          hr {
+            border: 1px solid #ffffff1c;
+            width: 95%;
+            border-radius: 100%;
+            box-shadow: 0px 2px 5px 0px #63659f;
           }
         }
       }
@@ -228,4 +281,52 @@
       display: none;
     }
   }
+}
+
+// buzz animation
+@keyframes buzz-animation {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+.chat-modal-buzz-animation {
+  animation: buzz-animation 0.6s;
 }
