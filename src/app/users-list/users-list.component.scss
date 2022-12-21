@@ -1,0 +1,19 @@
+.users-list-main-container {
+  h1 {
+    font-size: 15px;
+  }
+  .users-list-opener-btn {
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  [data-user-list="true"] {
+    display: block;
+  }
+
+  [data-user-list="false"] {
+    display: none;
+  }
+}

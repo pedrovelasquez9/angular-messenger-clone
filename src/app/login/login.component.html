@@ -3,12 +3,7 @@
     <h1>Sign in to</h1>
     <h1>Windows live <span>Messenger</span></h1>
     <div class="form-main-container">
-      <div class="form-image-container">
-        <img
-          src="../../assets/img/user-profile-img-placeholder.png"
-          alt="default profile image"
-        />
-      </div>
+      <app-profile-picture [userStatus]="selectedStatus"></app-profile-picture>
       <div class="form-inputs-container">
         <form>
           <input
@@ -30,7 +25,9 @@
           <a href="#">Can't sign in?</a>
           <div class="form-status-select-container">
             <label for="status-select">Sign in as:</label>
-            <span [class]="['checkbox-status', selectedStatus]"></span>
+            <app-status-indicator
+              [userStatus]="selectedStatus"
+            ></app-status-indicator>
             <select [(ngModel)]="selectedStatus" name="statusSelect">
               <option *ngFor="let opt of statusOptions" [value]="opt.value">
                 {{ opt.name }}
@@ -54,7 +51,9 @@
             >
           </div>
           <div class="form-buttons-container">
-            <button class="form-sign-in-btn" type="button">Sign in</button>
+            <button class="form-sign-in-btn" type="button" (click)="login()">
+              Sign in
+            </button>
             <button type="button">Cancel</button>
           </div>
           <p>Don't have Windows live ID? <a href="#">Sign up</a></p>

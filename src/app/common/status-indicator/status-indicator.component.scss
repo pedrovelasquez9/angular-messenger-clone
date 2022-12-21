@@ -1,0 +1,24 @@
+.checkbox-status {
+  height: 10px;
+  width: 10px;
+  border-radius: 2px;
+  box-shadow: inset 0px 2px 4px 0px #fff;
+  display: block;
+  box-shadow: 0px 0px 2px 1px #ddd;
+}
+.available {
+  background-color: #52e52a;
+  border: 1px solid #4ad026;
+}
+.away {
+  background-color: #f3a304;
+  border: 1px solid #c68504;
+}
+.busy {
+  background-color: #e82013;
+  border: 1px solid #cf1c10;
+}
+.offline {
+  background-color: #deeff9;
+  border: 1px solid #c1d2dc;
+}

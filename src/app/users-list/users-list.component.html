@@ -1,0 +1,8 @@
+<div class="users-list-main-container">
+  <button class="users-list-opener-btn" (click)="toggleIsOpened()">
+    {{ title | titlecase }}
+  </button>
+  <div [attr.data-user-list]="isOpened">
+    <app-user-item></app-user-item>
+  </div>
+</div>
