@@ -10,9 +10,10 @@ import { ProfilePictureComponent } from './common/profile-picture/profile-pictur
 import { StatusIndicatorComponent } from './common/status-indicator/status-indicator.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UserItemComponent } from './user-item/user-item.component';
+import { FloatingChatWindowComponent } from './floating-chat-window/floating-chat-window.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, ProfilePictureComponent, StatusIndicatorComponent, UsersListComponent, UserItemComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, ProfilePictureComponent, StatusIndicatorComponent, UsersListComponent, UserItemComponent, FloatingChatWindowComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

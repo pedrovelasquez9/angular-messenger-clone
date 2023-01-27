@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { UserData } from '../interfaces/user-data';
 
 @Component({
   selector: 'app-users-list',
@@ -8,6 +9,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class UsersListComponent implements OnInit {
   @Input() title: string = 'connected';
   @Input() isOpened: boolean = true;
+  @Input() usersList: UserData[] = [];
+
   constructor() {}
 
   toggleIsOpened(): void {

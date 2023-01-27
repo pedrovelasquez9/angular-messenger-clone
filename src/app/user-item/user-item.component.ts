@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { DEFAULT_STATUS } from './../constants/login-constants';
+import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { FloatingChatWindowComponent } from '../floating-chat-window/floating-chat-window.component';
+import { UserData } from './../interfaces/user-data';
 
 @Component({
   selector: 'app-user-item',
@@ -7,8 +8,14 @@ import { DEFAULT_STATUS } from './../constants/login-constants';
   styleUrls: ['./user-item.component.scss'],
 })
 export class UserItemComponent implements OnInit {
-  @Input() userStatus: string = DEFAULT_STATUS;
+  @Input() user!: UserData;
+  @ViewChild(FloatingChatWindowComponent) floatingChat!:any;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  openChat(): void{
+    this.floatingChat.modalElement.nativeElement.show();
+  }
 }

@@ -54,7 +54,11 @@
   </div>
   <!-- MAIN CHAT  -->
   <div class="main-chat-container">
-    <app-users-list [title]="'connected'" [isOpened]="true"></app-users-list>
+    <app-users-list
+      [title]="'connected'"
+      [isOpened]="true"
+      [usersList]="usersList"
+    ></app-users-list>
     <app-users-list
       [title]="'disconnected'"
       [isOpened]="false"
@@ -64,117 +68,4 @@
   <div class="main-chat-footer">
     <img src="assets/img/msn-footer.png" alt="msn ad" />
   </div>
-  <dialog open #chatModal class="chat-modal-dialog-container">
-    <div class="dialog-window-controls">
-      <button>-</button>
-      <button (click)="closeModal()">X</button>
-    </div>
-    <div class="chat-window-control-container">
-      <div class="chat-modal-toolbar">
-        <button><img src="assets/img/new-conversation-icon.png" /></button>
-        <button><img src="assets/img/folder-icon.png" /></button>
-        <button><img src="assets/img/phone-icon.png" /></button>
-        <button><img src="assets/img/phone-icon-2.png" /></button>
-        <button><img src="assets/img/media-icon.png" /></button>
-        <button><img src="assets/img/game-icon.png" /></button>
-        <button><img src="assets/img/block-user-icon.png" /></button>
-      </div>
-      <div class="chat-modal-body">
-        <div class="chat-modal-container">
-          <div class="chat-pictures-container">
-            <app-profile-picture
-              [userStatus]="userStatus"
-            ></app-profile-picture>
-            <app-profile-picture
-              [userStatus]="userStatus"
-            ></app-profile-picture>
-          </div>
-          <div class="chat-conversation-container">
-            <div class="chat-conversation-header">
-              <h1>Danirod</h1>
-              <p>(Available)</p>
-            </div>
-            <hr />
-            <div class="chat-conversation">
-              <ul>
-                <li>
-                  <h1>Danirod</h1>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Soluta veritatis doloribus saepe velit. Nihil placeat atque
-                    dolores velit magnam eius quo deleniti. Alias ab repellat
-                    eum consectetur soluta dicta nesciunt?
-                  </p>
-                </li>
-                <li>
-                  <h1>Pedro</h1>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Soluta veritatis doloribus saepe velit. Nihil placeat atque
-                    dolores velit magnam eius quo deleniti. Alias ab repellat
-                    eum consectetur soluta dicta nesciunt?
-                  </p>
-                </li>
-                <li>
-                  <h1>Danirod</h1>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Soluta veritatis doloribus saepe velit. Nihil placeat atque
-                    dolores velit magnam eius quo deleniti. Alias ab repellat
-                    eum consectetur soluta dicta nesciunt?
-                  </p>
-                </li>
-                <li>
-                  <h1>Pedro</h1>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Soluta veritatis doloribus saepe velit. Nihil placeat atque
-                    dolores velit magnam eius quo deleniti. Alias ab repellat
-                    eum consectetur soluta dicta nesciunt?
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="chat-form-container">
-              <form>
-                <textarea
-                  name="message"
-                  id="message"
-                  cols="30"
-                  rows="10"
-                ></textarea>
-                <div class="chat-toolbar-container">
-                  <div class="chat-toolbar-left-bar">
-                    <button class="chat-toolbar-emoji">
-                      <img src="assets/img/msn-open-emoji.png" />
-                    </button>
-                    <button class="chat-toolbar-emoji">
-                      <img src="assets/img/wink-open-emoji.png" />
-                    </button>
-                    <button
-                      (click)="playBuzz()"
-                      class="chat-toolbar-emoji buzz-toolbar-btn"
-                    >
-                      <img src="assets/img/buzz-emoji.png" />
-                    </button>
-                    <button class="chat-toolbar-emoji">
-                      <img src="assets/img/msn-writting.png" />
-                    </button>
-                  </div>
-                  <div class="chat-toolbar-right-bar">
-                    <button class="chat-toolbar-emoji">
-                      <img src="assets/img/msn-pencil-chat.png" />
-                    </button>
-                    <button class="chat-toolbar-emoji">
-                      <img src="assets/img/msn-letter.png" />
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </dialog>
 </div>

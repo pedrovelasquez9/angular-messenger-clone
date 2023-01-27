@@ -3,6 +3,8 @@
     {{ title | titlecase }}
   </button>
   <div [attr.data-user-list]="isOpened">
-    <app-user-item></app-user-item>
+    <ng-container *ngFor="let user of usersList">
+      <app-user-item [user]="user"></app-user-item>
+    </ng-container>
   </div>
 </div>
