@@ -21,10 +21,15 @@ export class HomeComponent implements OnInit {
     status:"available", 
     shortMessage:"Programación en español"
   },{
-    name:"María Valente", 
+    name:"Dummy user", 
     status:"available", 
     shortMessage:"Hola Mundo"
   }];
+  public disconnectedUserList: UserData[] = [{
+    name:"Absent user", 
+    status:"disconnected", 
+    shortMessage:"Hola Mundo"
+  }]
   public userStatus: string = DEFAULT_STATUS;
   public statusOptions: UserStatusSelect[] = DEFAULT_STATUS_OPTIONS;
   constructor() {}

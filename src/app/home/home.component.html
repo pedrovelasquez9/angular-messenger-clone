@@ -1,10 +1,7 @@
 <div class="home-global-container">
   <!-- HOME HEADER -->
   <div class="home-header-container">
-    <img
-      src="../../assets/img/user-profile-img-placeholder.png"
-      alt="msn logo"
-    />
+    <img src="assets/img/user-profile-img-placeholder.png" alt="msn logo" />
     <p>Windows Live Messenger</p>
   </div>
   <!-- USER STATUS BAR -->
@@ -30,15 +27,15 @@
   <!-- TOOLBAR -->
   <div class="toolbar-container">
     <ul class="toolbar-ul">
-      <li><img src="../../assets/img/mensajes.png" alt="msn messages" /></li>
+      <li><img src="assets/img/mensajes.png" alt="msn messages" /></li>
       <li>
-        <img src="../../assets/img/info-msn-toolbar.png" alt="msn info" />
+        <img src="assets/img/info-msn-toolbar.png" alt="msn info" />
       </li>
-      <li><img src="../../assets/img/msn-cubes.png" alt="msn cubes" /></li>
+      <li><img src="assets/img/msn-cubes.png" alt="msn cubes" /></li>
     </ul>
     <ul class="toolbar-ul">
-      <li><img src="../../assets/img/msn-pencil.png" alt="msn pencil" /></li>
-      <li><img src="../../assets/img/msn-select.png" alt="msn select" /></li>
+      <li><img src="assets/img/msn-pencil.png" alt="msn pencil" /></li>
+      <li><img src="assets/img/msn-select.png" alt="msn select" /></li>
     </ul>
   </div>
   <!-- SEARCH BAR -->
@@ -62,10 +59,13 @@
     <app-users-list
       [title]="'disconnected'"
       [isOpened]="false"
+      [usersList]="disconnectedUserList"
     ></app-users-list>
   </div>
   <!-- CHAT FOOTER -->
   <div class="main-chat-footer">
-    <img src="assets/img/msn-footer.png" alt="msn ad" />
+    <a href="https://programacion-es.dev" target="_blank"
+      ><img src="assets/img/msn-footer.png" alt="msn ad"
+    /></a>
   </div>
 </div>

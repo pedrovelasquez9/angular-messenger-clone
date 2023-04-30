@@ -27,6 +27,12 @@
       align-items: flex-start;
       gap: 20px;
       font-size: 15px;
+      .developer-info-footer {
+        margin: 0;
+        a {
+          color: #000;
+        }
+      }
       .form-inputs-container {
         display: flex;
         flex-direction: column;

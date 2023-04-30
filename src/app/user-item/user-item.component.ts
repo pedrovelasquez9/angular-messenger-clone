@@ -17,5 +17,6 @@ export class UserItemComponent implements OnInit {
 
   openChat(): void{
     this.floatingChat.modalElement.nativeElement.show();
+    this.floatingChat.dragElement(this.floatingChat.modalElement.nativeElement);
   }
 }
